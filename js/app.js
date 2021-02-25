@@ -58,6 +58,10 @@ var App = (function() {
   }
 
   App.prototype.init = function(){
+
+    var isValid = Auth.authenticate();
+    if (!isValid) return;
+    
     this.loadData();
 
     if (this.opt.debug) this.loadDebug();
