@@ -61,7 +61,7 @@ var App = (function() {
 
     var isValid = Auth.authenticate();
     if (!isValid) return;
-    
+
     this.loadData();
 
     if (this.opt.debug) this.loadDebug();
@@ -104,12 +104,13 @@ var App = (function() {
     var metadata = _.map(results.values, function(row, i){
       return _.map(row, function(col, j){
         if (col===0) {
-          return { title: '', url: '' };
+          return { title: '', url: '', searchText: '' };
         }
         var item = _.object(fields, col);
         if (urlTemplate !== false) {
           item.url = urlTemplate(item);
         }
+        item.searchText = item.title.toLowerCase();
         return item;
       });
     });
