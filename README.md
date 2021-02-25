@@ -1,7 +1,5 @@
 # Image Collection Visualizer
 
-Visualizing [AMNH](https://www.amnh.org/)'s [Photographic Collection](http://lbry-web-007.amnh.org/digital/collections/show/2) with machine learning and [Library](https://www.amnh.org/research/research-library) metadata.
-
 ## Requirements
 
 You can install all Python requirements by running `pip install -r requirements.txt --user`
